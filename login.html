@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Connexion</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;background:#f0f2f5;height:100vh;display:flex;align-items:center;justify-content:center;margin:0}
+    .login-card{background:#fff;padding:24px;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,0.08);width:320px}
+    .login-card h1{font-size:20px;margin:0 0 12px}
+    .form-group{margin-bottom:12px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:#333}
+    input[type=text],input[type=password]{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:14px}
+    button{width:100%;padding:10px;border:none;background:#0078d4;color:#fff;border-radius:6px;font-size:15px;cursor:pointer}
+    button:hover{background:#005fa3}
+    .small{font-size:12px;color:#666;margin-top:8px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h1>Se connecter</h1>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="login">Login</label>
+        <input id="login" name="login" type="text" placeholder="Votre login" required autofocus>
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input id="password" name="password" type="password" placeholder="Votre mot de passe" required>
+      </div>
+      <button type="submit">Connexion</button>
+      <div class="small">Entrez vos identifiants pour accéder</div>
+    </form>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const login = document.getElementById('login').value;
+      alert('Tentative de connexion pour: ' + login);
+    });
+  </script>
+</body>
+</html>
