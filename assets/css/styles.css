@@ -1,0 +1,26 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.hero-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.category-card img,
+.product-thumb {
+  height: 220px;
+  object-fit: cover;
+}
+
+.sticky-filters {
+  position: sticky;
+  top: 88px;
+}
+
+.rating-stars {
+  color: #ffb703;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
